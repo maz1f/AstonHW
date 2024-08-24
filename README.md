@@ -1,6 +1,6 @@
-#Aston intensive Homework
+# Aston intensive Homework
 
-##Task 1:
+## Task 1:
 Написать кастомный ArrayList со следующими методами:
 
 	- add(int i, T element)
