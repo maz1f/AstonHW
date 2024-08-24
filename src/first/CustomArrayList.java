@@ -11,7 +11,6 @@ public class CustomArrayList<T> {
     private Object[] elements;
     private int size;
 
-    //  Constructors
     public CustomArrayList() {
         elements = new Object[DEFAULT_CAPACITY];
         size = 0;
@@ -29,7 +28,6 @@ public class CustomArrayList<T> {
         size = 0;
     }
 
-    //private methods
     private void grow() {
         Object[] newArray = new Object[elements.length * 2];
         System.arraycopy(elements, 0, newArray, 0, elements.length);
@@ -98,7 +96,6 @@ public class CustomArrayList<T> {
         return res;
     }
 
-    //public methods
     public boolean add(T element) {
         checkCapacity();
         elements[size++] = element;
@@ -160,7 +157,6 @@ public class CustomArrayList<T> {
         return sb.toString();
     }
 
-    //quick sort
     public void sort(Comparator<? super T> c) {
         Object[] tempArray = new Object[size];
         System.arraycopy(elements, 0, tempArray, 0, size);
