@@ -1,4 +1,4 @@
-package first;
+package main.first;
 
 import java.util.Arrays;
 import java.util.Collection;
