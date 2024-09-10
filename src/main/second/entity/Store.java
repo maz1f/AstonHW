@@ -15,6 +15,19 @@ import java.util.Set;
                 @NamedAttributeNode("employees")
         }
 )
+@NamedEntityGraph(
+        name = "store-with-products",
+        attributeNodes = {
+                @NamedAttributeNode("products")
+        }
+)
+@NamedEntityGraph(
+        name = "store-with-products-and-employees",
+        attributeNodes = {
+                @NamedAttributeNode("products"),
+                @NamedAttributeNode("employees")
+        }
+)
 @Entity
 @Getter @Setter
 @NoArgsConstructor
@@ -46,6 +59,10 @@ public class Store {
 
     public void addProduct(Product p) {
         products.add(p);
+    }
+
+    public void removeProduct(Product p) {
+        products.remove(p);
     }
 
     public void addEmployee(Employee e) {

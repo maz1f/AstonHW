@@ -8,11 +8,11 @@ import lombok.Setter;
 @Entity
 @Setter @Getter
 @NoArgsConstructor
+@Table(name = "employee", uniqueConstraints= @UniqueConstraint(columnNames={"id", "name"}) )
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-
     private String name;
 
     @ManyToOne

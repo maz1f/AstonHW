@@ -52,4 +52,23 @@ public abstract class Product {
         this.name = name;
         this.price = price;
     }
+
+    public void clone(String name, double price) {
+        this.name = name;
+        this.price = price;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (hashCode() != obj.hashCode()) return false;
+        if (getClass() != obj.getClass()) return false;
+        return ((Product) obj).getId() == this.id;
+    }
+
+    @Override
+    public int hashCode() {
+        return (int)(id*price*name.hashCode());
+    }
 }
